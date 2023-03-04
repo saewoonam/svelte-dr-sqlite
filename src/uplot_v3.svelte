@@ -87,6 +87,8 @@
         })
     }
     opts.series = s;
+    opts.series[0].value = "{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}";
+
     // console.log('opts.series', opts.series)
     // console.log('labels', labels);
     labels.forEach((item, index) => {

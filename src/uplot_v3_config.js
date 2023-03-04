@@ -7,9 +7,9 @@ export let data_config = [
 	  let isYRangeFixed = false;
 	  let isXRangeFixed = false;
 export let opts_config = {
-			title: "My Chart",
-			width: 400,
-			height: 300,
+			title: "DR sensors",
+			width: 800,
+			height: 400,
 	      legend: {
         show: true,
       },
