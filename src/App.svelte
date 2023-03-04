@@ -8,9 +8,10 @@
     let ids = [100, 101, 102, 103, 104, 105, 106, 107, 108, 109];
     onMount(async () => {
         async function readSensor(id, start_ts=0) {
-
+            let host = '132.163.53.82:3200';
             // let url = `http://132.163.53.82:3200/database/log.db/data?id=${id}`;
-            let url = `http://132.163.53.82:3200/database/log.db/data?id=${id}&start=${start_ts}`;
+            let url = `http://${host}/database/log.db/data?id=${id}&start=${start_ts}`;
+            // let url = `http://127.0.0.1:3200/database/log.db/data?id=${id}&start=${start_ts}`;
             var response = await fetch(url); 
             var json = await response.json(); 
             return json['data']
@@ -57,7 +58,7 @@
                 }
             }
             if (new_ts>0) last_ts = new_ts;
-            console.log('new_data', new_data);
+            // console.log('new_data', new_data);
 
             for(var i=0; i<new_data.length; i++) {
                 data[i].push(new_data[i])
